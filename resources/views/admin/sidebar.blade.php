@@ -109,12 +109,12 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="/admin-kelas/create" class="menu-link">
+                    <a href="/data_kerohanian/create" class="menu-link">
                         <div data-i18n="Without menu">Tambah Data</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/admin-kelas" class="menu-link">
+                    <a href="/data_kerohanian" class="menu-link">
                         <div data-i18n="Without navbar">List Data Kerohanian</div>
                     </a>
                 </li>

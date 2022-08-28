@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\DataKerohanianController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Siswa\EkstensifController;
 use Illuminate\Support\Facades\Route;
@@ -40,3 +41,5 @@ Route::resource('/ekstensif', EkstensifController::class)->middleware('siswa');
 
 // Admin Route
 Route::get('/admin-dashboard', [AdminController::class, 'index'])->middleware('admin');
+// CRUD DATA KEROHANIAN
+Route::resource('/data_kerohanian', DataKerohanianController::class);
