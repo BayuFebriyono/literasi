@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Siswa\EkstensifController;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,9 @@ Route::get('/', function () {
 
 Route::get('/login-siswa', [LoginController::class, 'viewSiswa']);
 Route::post('/login-siswa', [LoginController::class, 'loginSiswa']);
-Route::post('/login-guru', [LoginController::class, 'loginSiswa']);
+Route::get('/login-guru', [LoginController::class, 'viewGuru']);
+Route::post('/login-guru', [LoginController::class, 'loginGuru']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('/test', function () {
     return view('siswa.main');
@@ -30,3 +33,10 @@ Route::get('/test', function () {
 
 // CRUD Ekstensif
 Route::resource('/ekstensif', EkstensifController::class)->middleware('siswa');
+
+
+
+
+
+// Admin Route
+Route::get('/admin-dashboard', [AdminController::class, 'index'])->middleware('admin');

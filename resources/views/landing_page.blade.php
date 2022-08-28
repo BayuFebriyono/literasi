@@ -50,10 +50,12 @@
                         </li>
 
                     </ul>
-                    @if (auth()->guard('siswa')->guest())
+                    @if (auth()->guard('siswa')->guest() &&
+                        auth()->guard('guru')->guest())
                         <a href="/login-siswa" class="btn btn-primary ml-lg-3 primary-shadow">Log In </a>
-                    @elseif (auth()->guard('siswa')->check())
-                        <a href="/login-siswa" class="btn btn-danger ml-lg-3 primary-shadow">Log Out </a>
+                    @elseif (auth()->guard('siswa')->check() ||
+                        auth()->guard('guru')->check())
+                        <a href="/logout" class="btn btn-danger ml-lg-3 primary-shadow">Log Out </a>
                     @endif
                 </div>
             </nav>

@@ -36,7 +36,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form validate-form" method="POST" action="{{ url('/login_guru') }}">
+                <form class="login100-form validate-form" method="POST" action="{{ url('/login-guru') }}">
                     @csrf
                     <span class="login100-form-title p-b-26">
                         Login Sebagai Guru
@@ -76,7 +76,7 @@
                             Anda Bukan Guru?,&nbsp;
                         </span>
 
-                        <a class="txt2" href="/login_siswa">
+                        <a class="txt2" href="/login-siswa">
                             Login Sebagai Siswa
                         </a>
                     </div>

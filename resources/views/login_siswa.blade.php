@@ -77,7 +77,7 @@
                             Anda Bukan Siswa?,&nbsp;
                         </span>
 
-                        <a class="txt2" href="/login_page">
+                        <a class="txt2" href="/login-guru">
                             Login Sebagai Guru
                         </a>
                     </div>
