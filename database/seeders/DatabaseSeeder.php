@@ -20,5 +20,19 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        \App\Models\Siswa::create([
+            'tahun_masuk' => '2022',
+            'nomor_induk' => '123',
+            'password' => bcrypt('123'),
+            'nama' => 'agus',
+            'alamat' => 'Mojokerto',
+            'jenis_kelamin' => 'L',
+            'nama_wali' => 'Udin',
+            'hp_siswa' => '0230283082',
+            'hp_wali' => '038203223',
+            'tes_diagnostik' => 'OK',
+            'tahun_pelajaran' => '2022/2023'
+        ]);
     }
 }

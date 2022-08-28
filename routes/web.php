@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Siswa\EkstensifController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing_page');
 });
+
+Route::get('/login-siswa', [LoginController::class, 'viewSiswa']);
+Route::post('/login-siswa', [LoginController::class, 'loginSiswa']);
+
+Route::get('/test', function () {
+    return view('siswa.main');
+});
+
+
+// CRUD Ekstensif
+Route::resource('/ekstensif', EkstensifController::class)->middleware('siswa');
