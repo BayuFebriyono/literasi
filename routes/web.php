@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/login-siswa', [LoginController::class, 'viewSiswa']);
 Route::post('/login-siswa', [LoginController::class, 'loginSiswa']);
+Route::post('/login-guru', [LoginController::class, 'loginSiswa']);
 
 Route::get('/test', function () {
     return view('siswa.main');

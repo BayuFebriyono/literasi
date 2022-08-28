@@ -12,6 +12,11 @@ class LoginController extends Controller
         return view('login_siswa');
     }
 
+    public function viewGuru()
+    {
+        return view('login_guru');
+    }
+
     public function loginSiswa(Request $request)
     {
         $credentials = $request->validate([
@@ -20,6 +25,22 @@ class LoginController extends Controller
         ]);
 
         if (Auth::guard('siswa')->attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('/');
+        }
+
+        return back()->with('error', 'Email atau password salah');
+    }
+
+    public function loginGuru(Request $request)
+    {
+        $credentials = $request->validate([
+            'nip' => ['required'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::guard('guru')->attempt($credentials)) {
             $request->session()->regenerate();
 
             return redirect()->intended('/');

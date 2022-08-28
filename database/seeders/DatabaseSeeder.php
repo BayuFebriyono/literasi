@@ -34,5 +34,15 @@ class DatabaseSeeder extends Seeder
             'tes_diagnostik' => 'OK',
             'tahun_pelajaran' => '2022/2023'
         ]);
+
+
+        \App\Models\Guru::create([
+            'nip' => '123',
+            'password' => bcrypt('123'),
+            'nama' => 'Ahmad',
+            'alamat' => 'Sooko',
+            'jenis_kelamin' => 'L',
+            'admin' => true
+        ]);
     }
 }

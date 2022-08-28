@@ -77,7 +77,7 @@
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
-        @include('siswa.sidebar');
+        @include('siswa.sidebar')
 
         <!-- Layout container -->
         <div class="layout-page">
@@ -171,6 +171,8 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
 
     @yield('body-bottom')
   </body>
